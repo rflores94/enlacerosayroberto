@@ -1,18 +1,19 @@
 image: node:14
 
 pipelines:
-  default:
-    - step:
-        name: Build and Deploy
-        caches:
-          - node
-        script:
-          - npm install
-          - npm run build --prod
-          - apt-get update && apt-get install -y lftp
-          - lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R dist/ /remote/directory"
-        artifacts:
-          - dist/**
+  branches:
+    master:
+      - step:
+          name: Build and Deploy
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build --prod
+            - apt-get update && apt-get install -y lftp
+            - lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R dist/ /remote/directory"
+          artifacts:
+            - dist/**
 
 definitions:
   caches:
