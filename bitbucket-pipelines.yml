@@ -11,7 +11,7 @@ pipelines:
             - npm install
             - npm run build --prod
             - apt-get update && apt-get install -y lftp
-            - lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R dist/ /public_html; bye"
+            - lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R dist/sandbox /public_html; bye"
           artifacts:
             - dist/**
   
