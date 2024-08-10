@@ -9,6 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  title = 'Bienvenidos a la historia de nuestra boda!';
-  subtitle = 'A continuación os contaremos más cosas sobre este día tan importante para nosotros.'
+  title = 'Bienvenidos a nuestra web de boda.';
+  date = '7 de diciembre del 2024';
 }

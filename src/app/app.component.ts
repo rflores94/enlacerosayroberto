@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Boda de Rosa & Roberto';
+  title = 'Bienvenidos a nuestra web de boda.';
   date = '7 de diciembre del 2024';
 }
