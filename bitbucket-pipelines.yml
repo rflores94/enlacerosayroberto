@@ -4,17 +4,24 @@ pipelines:
   branches:
     master:
       - step:
-          name: Build and Deploy
+          name: Build
           caches:
             - node
           script:
             - npm install
             - npm run build --prod
+          artifacts:
+            - dist/**
+      - step:
+          name: Deploy
+          caches:
+            - node
+          script:
             - apt-get update && apt-get install -y lftp
             - lftp -e "set ssl:verify-certificate no; open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R dist/sandbox /public_html; bye"
           artifacts:
             - dist/**
-  
+
 definitions:
   caches:
     node: ~/.npm
