@@ -1,5 +1,6 @@
-*{
-  font-family: "Lora", serif;
+* {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
 }
 
 nav {
@@ -25,12 +26,6 @@ nav a,
   text-align: center;
 }
 
-.great-vibes-regular {
-  font-family: "Lora", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .title {
   font-size: 3.5rem;
 }
@@ -39,6 +34,6 @@ nav a,
   font-size: 2rem;
 }
 
-.logo{
+.logo {
   width: 15em;
 }

@@ -1,21 +1,46 @@
-.logo{
-    width: 35em;
+h1, h2, h3 {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
 }
 
-.row{
-    margin-bottom: 7em;
-    margin-top: 5em;
+h3 > a {
+  color: black;
+}
+
+.logo {
+  width: 35em;
+}
+
+.row {
+  margin-bottom: 7em;
+  margin-top: 5em;
 }
 
 .image-container {
-    position: relative;
-    width: 50%;
-    height: 50%;
+  position: relative;
+  width: 50%;
+  height: 50%;
 }
 
 .full-width-height {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+}
+
+p {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+#logo_parking_container img {
+  width: 2em;
 }
 
