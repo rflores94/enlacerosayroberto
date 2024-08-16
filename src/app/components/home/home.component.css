@@ -11,9 +11,13 @@ h3 > a {
   width: 35em;
 }
 
+#home{
+  margin-top: 5em;  
+}
+
 .row {
-  margin-bottom: 7em;
-  margin-top: 5em;
+  border-bottom: 1px #989fa2 solid;
+  padding-top: 0.5em;  
 }
 
 .image-container {
@@ -44,3 +48,7 @@ h3 {
   width: 2em;
 }
 
+img{
+  margin-left: 1em;
+  margin-right: 1em;
+}
