@@ -1,8 +1,12 @@
+/* Global styles */
+
+/* General font settings */
 * {
   font-family: "Edu AU VIC WA NT Hand", cursive;
   font-optical-sizing: auto;
 }
 
+/* Navigation bar styles */
 nav {
   background-color: white;
   padding: 1em;
@@ -12,7 +16,7 @@ nav {
 nav a,
 .nav-item a {
   color: black;
-  font-size: 20px;
+  font-size: 20px; /* Tamaño de fuente reducido */
 }
 
 .nav-item.active .nav-link {
@@ -26,6 +30,7 @@ nav a,
   text-align: center;
 }
 
+/* Title and subtitle styles */
 .title {
   font-size: 3.5rem;
 }
@@ -34,6 +39,107 @@ nav a,
   font-size: 2rem;
 }
 
+/* Logo styles */
 .logo {
   width: 15em;
+}
+
+/* Host styling for Angular component */
+:host {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+.navbar {
+  margin-bottom: 1rem; /* Optional, adjust space below the navbar */
+}
+
+.content {
+  margin-top: 4rem; /* Ensures content is not hidden under the fixed navbar */
+}
+
+.col-12 {
+  padding: 0 !important;
+}
+
+/* General image styles */
+img {
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 10px; /* Adds rounded borders */
+}
+
+/* Specific styles for full-width-height images */
+.full-width-height {
+  width: 100%;
+  height: auto; /* Automatically adjusts height */
+  object-fit: contain; /* Ensures the image is fully visible within its container */
+  max-height: 700px; /* Increased max height for larger images */
+  max-width: 100%; /* Allows image to take up full width if needed */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .full-width-height {
+    height: auto; /* Adjusts height automatically on smaller screens */
+    max-height: 500px; /* Limits height on smaller screens */
+  }
+}
+
+.menu-text {
+  display: none; /* Ya no es necesario el texto "Menú" */
+}
+
+/* Eliminar el botón de toggle completamente */
+.navbar-toggler {
+  display: none;
+}
+
+/* Diseño del menú en dos filas en pantallas pequeñas */
+@media (max-width: 767.98px) {
+  .navbar-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mantiene 2 columnas */
+    grid-template-rows: repeat(2, auto); /* Crea 3 filas automáticas */
+    gap: 10px; /* Separación entre los elementos */
+    justify-items: center; /* Centrar los elementos horizontalmente */
+    width: 100%;
+  }
+
+  .nav-item {
+    text-align: center;
+    width: 100%; /* Asegura que cada item ocupe el 100% del ancho de la columna */
+  }
+
+  .nav-link {
+    display: block;
+    padding: 5px 0; /* Espacio reducido alrededor del texto */
+    font-size: 14px; /* Reducimos el tamaño de la fuente */
+  }
+
+  nav a,
+.nav-item a {
+  font-size: 16px; /* Tamaño de fuente reducido */
+}
+}
+
+
+/* Estilos adicionales para pantallas más grandes */
+@media (min-width: 768px) {
+  .navbar-nav {
+    display: flex;
+    justify-content: space-around;
+  }
 }

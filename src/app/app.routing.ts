@@ -1,12 +1,25 @@
-import { ModuleWithProviders } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HomeComponent} from './components/home/home.component';
+import {CeremoniaComponent} from './components/ceremonia/ceremonia.component';
+import {ConviteComponent} from './components/convite/convite.component';
+import {AsistenciaComponent} from './components/asistencia/asistencia.component';
+import {RegaloComponent} from "./components/regalo/regalo.component";
+import {TransporteComponent} from "./components/transporte/transporte.component";
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: '**', component: HomeComponent },
+const routes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'ceremonia', component: CeremoniaComponent},
+  {path: 'convite', component: ConviteComponent},
+  {path: 'asistencia', component: AsistenciaComponent},
+  {path: 'regalo', component: RegaloComponent},
+  {path: 'transporte', component: TransporteComponent},
+  {path: '**', redirectTo: ''}  // Redirige cualquier ruta no encontrada a la home
 ];
 
-export const appRoutingProviders: any[] = [];
-export const routing: ModuleWithProviders<any> =
-  RouterModule.forRoot(appRoutes);
+@NgModule({
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {
+}

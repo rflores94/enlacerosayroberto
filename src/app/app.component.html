@@ -1,45 +1,24 @@
-<style>
-  :host {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-  }
-</style>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarNavDropdown"
-    aria-controls="navbarNavDropdown"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <div class="navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#" (click)="closeMenu()">
-          Inicio <span class="sr-only">(current)</span>
-        </a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" (click)="closeMenu()">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#ceremonia" (click)="closeMenu()">Ceremonia</a>
+        <a class="nav-link" routerLink="/ceremonia" (click)="closeMenu()">Ceremonia</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#convite" (click)="closeMenu()">Convite</a>
+        <a class="nav-link" routerLink="/convite" (click)="closeMenu()">Convite</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#asistencia" (click)="closeMenu()">Asistencia</a>
+        <a class="nav-link" routerLink="/regalo" (click)="closeMenu()">Regalo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/transporte" (click)="closeMenu()">Transporte</a>
       </li>
     </ul>
   </div>
 </nav>
 
-<div class="content mt-4" role="main">
-</div>
+<div class="content mt-4" role="main"></div>
 <router-outlet></router-outlet>

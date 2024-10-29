@@ -1,54 +1,91 @@
-h1, h2, h3 {
-  font-family: "Edu AU VIC WA NT Hand", cursive;
-  font-optical-sizing: auto;
+/* Home-specific styles */
+
+@font-face {
+  font-family: 'Tifanny';
+  src: url('/assets/font/BrittanySignature.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
 }
 
-h3 > a {
-  color: black;
+h2{
+  font-family: 'Tifanny';
+  font-size: 3rem;
 }
 
+#nombres{
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+#home {
+  /* margin-top: 5em; */
+  padding: 70px 20px;
+  border-radius: 10px;
+  background-image: url('/assets/fondo.png'); /* Reemplaza con la URL de tu imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el elemento */
+  background-size: cover; /* Escala la imagen para cubrir todo el área del elemento */
+}
+
+
+/* Adjusting the margin for the title and date */
+.title {
+  font-family: "Great Vibes", cursive; /* Specific font for title */
+  color: #3a3a3a; /* General color */
+  margin-top: 2rem; /* Top margin for smaller screens */
+  margin-bottom: 2rem; /* Bottom margin for smaller screens */
+}
+
+.title.mt-lg-5 {
+  margin-top: 5rem; /* Larger top margin for larger screens */
+}
+
+.title.mb-lg-5 {
+  margin-bottom: 5rem; /* Larger bottom margin for larger screens */
+}
+
+/* Styles for logo */
 .logo {
-  width: 35em;
+  width: 15em;
+  margin-top: 3rem; /* Default margin */
 }
 
-#home{
-  margin-top: 5em;  
+.logo.mt-lg-4 {
+  margin-top: 4rem; /* Larger margin-top for larger screens */
 }
 
-.row {
-  border-bottom: 1px #989fa2 solid;
-  padding-top: 0.5em;  
-}
-
-.image-container {
-  position: relative;
-  width: 50%;
-  height: 50%;
-}
-
+/* Image container styles */
 .full-width-height {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+  object-fit: contain;
+  max-height: 700px;
+  max-width: 100%;
 }
 
-p {
-  font-size: 1rem;
+#home {
+  display: flex;
+  flex-direction: column; /* Predeterminado como columna para pantallas pequeñas */
+  gap: 20px; /* Espacio entre columnas para pantallas grandes */
 }
 
-h2 {
-  font-size: 2rem;
-}
+@media (min-width: 992px) {
+  /* Cambia a fila en pantallas grandes */
+  #home {
+    flex-direction: row;
+  }
 
-h3 {
-  font-size: 1.2rem;
-}
+  #imagen_boda{
+    display: inline !important;
+  }
 
-#logo_parking_container img {
-  width: 2em;
-}
+  h2{
+    font-size: 7rem;
+  }
+  
+  #texto_invitacion p{
+    font-size: 1.5rem;
+  }
 
-img{
-  margin-left: 1em;
-  margin-right: 1em;
+  #home {
+    margin-top: 5em;
+  }
 }

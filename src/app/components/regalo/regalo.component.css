@@ -1,0 +1,47 @@
+#regalo {
+  margin-top: 5em;
+  padding: 40px 20px;
+  border-radius: 10px;
+  background-image: url('/assets/fondo.png'); /* Reemplaza con la URL de tu imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el elemento */
+  background-size: cover; /* Escala la imagen para cubrir todo el área del elemento */
+}
+
+h1 {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+#texto_regalo {
+  font-size: 1.4em;
+  /* text-align: left; */
+}
+
+@media (min-width: 992px) {
+  /* Toma efecto en pantallas grandes (lg y superiores) */
+  .mt-desktop {
+    margin-top: 6em;
+  }
+}
+
+#regalo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 992px) {
+  /* Cambia a fila en pantallas grandes */
+  #regalo {
+    flex-direction: row;
+  }
+
+  #imagen_anillo{
+    margin-top: 5rem;
+  }
+}

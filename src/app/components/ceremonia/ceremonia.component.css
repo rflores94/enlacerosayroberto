@@ -1,0 +1,62 @@
+/* Ceremonia-specific styles */
+
+#ceremonia {
+  margin-top: 5em;
+  padding: 40px 20px;
+  border-radius: 10px;
+  background-image: url('/assets/fondo.png'); /* Reemplaza con la URL de tu imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen en el elemento */
+  background-size: cover; /* Escala la imagen para cubrir todo el área del elemento */
+}
+
+.ceremonia-directions {
+  font-family: 'Lora', serif;
+  color: #3a3a3a;
+  margin-bottom: 15px;
+}
+
+.ceremonia-directions p a {
+  font-size: 1rem;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.ceremonia-directions p a:hover {
+  text-decoration: underline;
+}
+
+
+iframe.rounded {
+  border-radius: 10px;
+  padding: 0.3em;
+}
+
+h1 {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+h4{
+  font-size: 1rem;
+}
+
+.ceremonia-parking{
+  text-align: left;
+}
+
+#ceremonia {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 992px) { /* Para pantallas grandes */
+  #ceremonia {
+    flex-direction: row;
+  }
+}
